@@ -1,7 +1,7 @@
 functions:
-  - name: image-label-2-algolia
+  - name: image-labels-2-algolia
     runtime: nodejs14
-    handler: image-label-2-algolia.handler
+    handler: image-labels-2-algolia.handler
     env:
       AWS_ACCESS_KEY:
         value_from_secret: aws-access-key
