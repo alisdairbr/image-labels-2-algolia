@@ -1,0 +1,11 @@
+{
+  "name": "image-labels-2-aloglia",
+  "version": "1.0.0",
+  "main": "./image-labels-2-algolia.js",
+  "homepage": "https://www.koyeb.com",
+  "license": "MIT",
+  "dependencies": {
+    "algoliasearch": "^4.5.1",
+    "aws-sdk": "^2.742.0"
+  }
+}
