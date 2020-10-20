@@ -127,7 +127,11 @@ const handler = async (event) => {
     objectbBody
   );
 
-  await indexLabels(key, detectedLabels, presignedURL);
+  await indexLabels(
+    key,
+    detectedLabels,
+    `http://cdn.image-labels-search.com.global.prod.fastly.net/${key}`
+  );
 };
 
 module.exports.handler = handler;
