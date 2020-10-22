@@ -109,6 +109,9 @@ const validateEnvironment = (bucket) => {
       "Environment variables ALGOLIA_APP_ID, ALGOLIA_INDEX and ALGOLIA_API_KEY must be set."
     );
   }
+  if (!process.env.FASTLY_ENDPOINT) {
+    throw new Error("Environment variables FASTLY_ENDPOINT must be set.");
+  }
 };
 
 const handler = async (event) => {
@@ -130,7 +133,7 @@ const handler = async (event) => {
   await indexLabels(
     key,
     detectedLabels,
-    `http://cdn.image-labels-search.com.global.prod.fastly.net/${key}`
+    `${process.env.FASTLY_ENDPOINT}/${key}`
   );
 };
 
